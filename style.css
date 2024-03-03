@@ -1,0 +1,122 @@
+/* 
+selector {
+  propiedad: valor <- declaracion
+}
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #e5e4e2;
+  padding: 30px;
+  font-family: system-ui, sans-serif; /* Hereda el estilo de letra a todos los elementos*/
+}
+
+h1 {
+  /* color: rgba(0, 0, 0, .1); Legacy */
+  /* color: rgb(0 0 0 / 60%); Moderno */
+  /* color: hsl(342, 48%, 33%); h: matiz, s: satueracion, l: luminocidad */
+  /* color: oklch(43 4 20); */
+  color: #006aff;
+  /* border-width: 3px;
+  border-style: solid;
+  border-color: #00ff7b; */
+  border: 3px solid #05bf5f;
+}
+
+.first-a {
+  color: #031606;
+  font-family: monospace;
+}
+
+a {
+  color: #ff00c8;
+}
+
+a:hover { /* pseudoclase hover */
+  color: yellow;
+  outline: 4px solid red;
+}
+
+#showInfo {
+  background-color: red;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#showInfo:active { /* pseudoclase active */
+  background-color: #18d256;
+}
+
+/* .container {
+  color: red;
+  font-size: 34px;
+  border: 2px solid green;
+} */
+
+.child {
+  border: inherit;
+  /* border: initial; */
+  color: pink;
+  font-size: inherit;
+}
+
+a:focus {
+  border: 1px solid blue;
+}
+
+.tech:first-child {
+  color: #ff00c8;
+}
+
+.tech:last-child {
+  color: blueviolet;
+}
+
+/* usar dos selectores para especificar los estilos */
+.primary strong {
+  color: #006aff;
+}
+
+.secondary strong {
+  color: red;
+}
+
+article {
+  font-size:  24px;
+}
+
+/* Indicamos que se herede al selector que es 
+descendiente inmediato, al primer nivel
+ */
+article > p { 
+  color: blue;
+}
+
+/* Operador siguiente, aplica para el hermano siguiente, justo 
+despues o despues pero antes no */
+p ~ span { /* con el simbolo + aplica al que esta justo despues */
+  color: #ff00c8;
+}
+
+/* p { <= Este selector tiene un fallback
+  color: blue;
+  color: red;
+} */
+
+.container {
+  width: 100px;
+  color: white;
+  height: 100px;
+  background-color: red;
+  padding: 10px;
+  border: 10px solid green;
+  box-sizing: border-box; /* Esto suma todo y el total son el ancho y alto */
+  /* A diferencia del content-box que solo cuenta lo que es el contenido
+  le da el ancho y el alto mas aparte el padding y el border */
+}

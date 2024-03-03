@@ -1,0 +1,45 @@
+/*  Border box */
+/* .container {
+  width: 150px;
+  height: 150px;
+  background: white;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* overflow: auto;
+} */
+/* body {
+  background: #09f;
+  margin: 0;
+} */
+
+
+section {
+  border: 5px solid #ccc;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  position: relative; /* hace que la posicion abslouta lo tome como referencia */
+  background: red;
+}
+.container {
+  background-color: #90f;
+  width: 100px;
+  height: 100px;
+  /* position: static;  manera por defecto */
+  /* position: absolute; */
+  position: fixed; /* mantiene su lugar en el documento */
+  right: 0;
+  z-index: 2;
+  /* position: sticky;  se queda pegado hasta donde puede y debe tener position relative el padre */
+  /* left: 0;
+  bottom: 0;
+  top: 0; */
+  /* inset: 0;  forma corta de decirle top left,.... */
+  /* margin: auto; */
+}
+body {
+  background: #09f;
+}
